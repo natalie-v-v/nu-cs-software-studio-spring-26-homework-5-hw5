@@ -19,6 +19,15 @@ class TodosController < ApplicationController
   def edit
   end
 
+
+  def index
+    if params[:category].present?
+      @todos = Todo.with_category(params[:category])
+    else
+      @todos = Todo.all
+    end
+  end
+  
   # POST /todos or /todos.json
   def create
     @todo = Todo.new(todo_params)

@@ -54,13 +54,15 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "rspec-rails", "~> 7.0"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'rspec'
-  gem 'rspec-rails', '~> 3.0'
+  gem "rspec-rails", "~> 7.0"
   gem 'cucumber', '~> 11.1.0'
   gem "capybara"
   gem "selenium-webdriver"
+  gem "simplecov", require: false
 end
